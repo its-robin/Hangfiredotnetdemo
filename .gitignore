@@ -1,0 +1,25 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userprefs
+*.db
+*.db-journal
+appsettings.*.json
+appsettings.Secret.json
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# LocalDB files
+*.mdf
+*.ldf
+
+# Embedded repositories
+AIRetrol/
+
