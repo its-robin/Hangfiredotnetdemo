@@ -73,8 +73,8 @@ Hangfire.AlertingDemo.Web/
 ├── Program.cs                     # Hangfire setup & configuration
 ├── appsettings.json              # Connection string & settings
 └── wwwroot/
-    ├── index.html                # Web UI
-    └── js/jobs.js                # UI JavaScript
+	├── index.html                # Web UI
+	└── js/jobs.js                # UI JavaScript
 ```
 
 ## ⚙️ Configuration
@@ -86,7 +86,7 @@ By default, the app uses **LocalDB**. To use a different database, edit `appsett
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=HangfireAlertingDemo;Trusted_Connection=True;"
+	"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=HangfireAlertingDemo;Trusted_Connection=True;"
   }
 }
 ```
@@ -126,7 +126,7 @@ RecurringJob.AddOrUpdate("my-report", () => reportService.GenerateReport(), Cron
 ```csharp
 public class MyCustomService
 {
-    public void DoSomething() => Console.WriteLine("Job executed!");
+	public void DoSomething() => Console.WriteLine("Job executed!");
 }
 ```
 
@@ -146,7 +146,7 @@ Add authentication middleware before registering Hangfire Dashboard:
 ```csharp
 app.UseHangfireDashboard("/hangfire", new DashboardOptions 
 { 
-    Authorization = new[] { new BasicAuthAuthorizationFilter(...) }
+	Authorization = new[] { new BasicAuthAuthorizationFilter(...) }
 });
 ```
 
@@ -170,7 +170,9 @@ Contributions are welcome! To contribute:
 Please ensure:
 - Code follows C# conventions
 - Changes are well-documented
-- Existing tests still pass (see [Testing](#-testing) section)
+- Existing tests still pass
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
 ## 🧪 Testing
 
@@ -184,7 +186,7 @@ dotnet test Hangfire.AlertingDemo.Tests
 
 ## 📝 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
 
 ## 🔗 Resources & Links
 
